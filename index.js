@@ -11,7 +11,6 @@ app.get("/about",function(req, resp){
 	resp.render("about");
 });
 
-app.listen(8880, function(){
-	console.log(process.env.PORT);
-	console.log("Server started");
+app.listen(process.env.PORT, process.env.IP, function(){
+	console.log("Server started at " + process.env.IP + ":" + process.env.PORT);
 });
